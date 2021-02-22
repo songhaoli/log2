@@ -1,10 +1,9 @@
 /*  
     This program implements the BBP/Spigot algorithm to generate a few binary
-    digits of Log(2) beginning immediately after a given position id, or in other words
-    beginning at position id + 1.
+    digits of Log(2) , or Log(n) - Log(n-1) in general, beginning immediately after a given position id.
     This is a simplified version of the same alogrithm for pi.
     For more details, please see the Wikipedia page below and the references within.
-    https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula
+    https://en.wikipedia.org/wiki/Bailey-Borwein-Plouffe_formula
 */
 
 /*  Songhao Li    2021-02-12 */
@@ -78,6 +77,7 @@ int main() {
 
     int id = 1e7;
     /*  id is the digit position.  Digits generated follow immediately after id. */
+    // On a 2012 laptop, it takes about 10s for id = 1e7 and 1 min for id = 1e8.
     cout << " position = " << id << endl;
     
     double ans = intprt(x, id) + fracprt(x, id);
