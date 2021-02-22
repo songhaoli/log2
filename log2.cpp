@@ -70,8 +70,7 @@ string dbltobin(double d) {
     return ans;
 }
 
-int main()
-{
+int main() {
     int x = 2;
     /*  The program computes the digites of log(x)-log(x-1) in general.
         In the case x = 2, we have log(2)-log(1)=log(2)
@@ -86,7 +85,6 @@ int main()
     /* ans is the fractional part immediately after id. */
     cout << " fraction = " << setprecision(15) << ans << endl;
     
-
     string ansbin = dbltobin(ans);
     /* ansbin is the binary digits immediately after id. */
     cout << " binary digits = " + ansbin << endl;
